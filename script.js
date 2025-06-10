@@ -67,3 +67,9 @@ function typeWriterEffect(elementId, textArray, typingSpeed = 100, pauseTime = 1
       icon.classList.toggle('fa-sun', isDark);
       localStorage.setItem('theme', isDark ? 'dark' : 'light');
     });
+ const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
