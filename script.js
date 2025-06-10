@@ -51,4 +51,19 @@ function typeWriterEffect(elementId, textArray, typingSpeed = 100, pauseTime = 1
     const degrees = (percent / 100) * 360;
     el.querySelector('.circle').style.setProperty('--progress', degrees + 'deg');
   })
+  const toggleBtn = document.getElementById('theme-toggle');
+  const icon = toggleBtn.querySelector('i');
+
+    // Load saved theme
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+      icon.classList.replace('fa-moon', 'fa-sun');
+    }
   
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      const isDark = document.body.classList.contains('dark-mode');
+      icon.classList.toggle('fa-moon', !isDark);
+      icon.classList.toggle('fa-sun', isDark);
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
