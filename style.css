@@ -111,13 +111,6 @@ nav {
   .nav-links a:hover {
     color: #00f7ff; /* Optional: highlight on hover */
   }
-}
-
-
-  .nav-links.active {
-    display: flex;
-  }
-
   #menu-toggle {
     display: block;
   }
