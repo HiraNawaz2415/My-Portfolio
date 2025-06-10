@@ -13,11 +13,34 @@
     font-family: 'Segoe UI', sans-serif;
   }
   
-  body {
-    background-color: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
+  :root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --header-blue: #007BFF;
   }
+  
+  body.dark-mode {
+    --background-color: #121212;
+    --text-color: #f0f0f0;
+    --header-blue: #3399ff;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  
+  /* Toggle button styling */
+  #theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.3rem;
+    margin-left: 1rem;
+    color: var(--text-color);
+  }
+  
   
   nav {
     background: #1e1e1e;
@@ -389,7 +412,7 @@
       0 0 20px #0d6efd,
       0 0 40px #0d6efd;
   }
-
+ 
   h2{
     color: #00aaff; /* Light blue shade */
     text-shadow: 0 0 10px rgba(0, 170, 255, 0.7);
@@ -397,7 +420,6 @@
     margin-bottom: 20px;
     transition: transform 0.3s ease;
   }
-  
   /* Responsive */
   @media(max-width: 768px) {
     #languages {
