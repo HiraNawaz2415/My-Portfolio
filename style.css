@@ -123,8 +123,10 @@ header, section {
   text-align: center;
 }
 
-h1, h2 {
+h1 {
   margin-bottom: 20px;
+  font-size: 36px;
+  font-weight: bold;
 }
 
 .highlight {
