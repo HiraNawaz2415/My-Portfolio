@@ -416,6 +416,11 @@ h2{
 .swiper-slide {
   display: flex;
   flex-direction: column;
+  min-height: 250px;
   align-items: center;
   justify-content: center;
 }
+.swiper-wrapper {
+  display: flex;
+}
+
