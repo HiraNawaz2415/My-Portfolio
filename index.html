@@ -42,28 +42,44 @@
 
     <section id="projects">
       <h2>My Projects</h2>
-      <div class="projects-container">
-        <div class="project-card">
-          <img src="Assets/youtube.png" alt="Screenshot of Project One - Web App" />
-          <h3>Youtube Comments Scraper</h3>
-          <p>A web app built with HTML, CSS, and JS</p>
-          <a href="https://github.com/HiraNawaz2415/youtube_scraper_15" class="btn">View Project</a>
+      
+      <!-- Swiper container -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          
+          <!-- Slide 1 -->
+          <div class="swiper-slide project-card">
+            <img src="Assets/youtube.png" alt="Youtube Comments Scraper" />
+            <h3>Youtube Comments Scraper</h3>
+            <p>A web app built with HTML, CSS, and JS</p>
+            <a href="https://github.com/HiraNawaz2415/youtube_scraper_15" class="btn">View Project</a>
+          </div>
+    
+          <!-- Slide 2 -->
+          <div class="swiper-slide project-card">
+            <img src="Assets/outlierproject.png" alt="Outlier Detection App" />
+            <h3>Outlier Detection & Removal</h3>
+            <p>App allows to perform EDA</p>
+            <a href="https://outlierdetectionremovalapp-hira2415.streamlit.app/" class="btn">View Project</a>
+          </div>
+    
+          <!-- Slide 3 -->
+          <div class="swiper-slide project-card">
+            <img src="Assets/tmdb.png" alt="TMDB Explorer" />
+            <h3>TMDB Explorer</h3>
+            <p>A streamlit web app</p>
+            <a href="https://tmdb-explorer-hira2415.streamlit.app/" class="btn">View Project</a>
+          </div>
+    
         </div>
-        <div class="project-card">
-          <img src="Assets/outlierproject.png" alt="Screenshot of Project Two - Animated Landing Page" />
-          <h3>Outlier detection and Removal App</h3>
-          <p>App allow to perform EDA</p>
-          <a href="https://outlierdetectionremovalapp-hira2415.streamlit.app/" class="btn">View Project</a>
-        </div>
-        <div class="project-card">
-          <img src="Assets/tmdb.png" alt="Screenshot of Project Three - JavaScript Game" />
-          <h3>TMDB Explorer</h3>
-          <p>A streamlit web app</p>
-          <a href="https://tmdb-explorer-hira2415.streamlit.app/" class="btn">View Project</a>
-        </div>
+    
+        <!-- Swiper navigation buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
       </div>
     </section>
-
+    
     <section id="languages">
       <h2>Languages & Technologies I Learn</h2>
       <div class="circular-skills">
@@ -156,11 +172,38 @@
       
     </section>
   </main>
+  
 
   <footer>
     <p>&copy; 2025 Hira Nawaz. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Swiper Initialization -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+
+<!-- Your custom script -->
+<script src="script.js"></script>
+
 </body>
 </html>
