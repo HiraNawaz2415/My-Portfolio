@@ -16,9 +16,16 @@
   </style>
 </head>
 <body>
+<nav aria-label="Main Navigation">
+  <div class="logo">MyPortfolio</div>
 
-  <nav aria-label="Main Navigation">
-    <div class="logo">MyPortfolio</div>
+  <!-- Hamburger Menu Toggle -->
+  <button id="menu-toggle" aria-label="Toggle Menu">
+    <i class="fas fa-bars"></i> <!-- Requires Font Awesome -->
+  </button>
+
+  <!-- Navigation Links -->
+  <div class="nav-links" id="nav-links">
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
@@ -27,8 +34,12 @@
       <li><a href="#contact">Contact</a></li>
       <li><a href="Hira_Resume.pdf" download>Resume</a></li>
     </ul>
-     <button id="theme-toggle">🌓</button>
-  </nav>
+  </div>
+
+  <!-- Theme Toggle Button -->
+  <button id="theme-toggle" aria-label="Toggle Theme">🌓</button>
+</nav>
+
 
   <header id="home">
     <h1>Hello, I'm <span class="highlight">Hira Nawaz</span></h1>
