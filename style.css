@@ -92,7 +92,7 @@ nav {
     position: absolute;
     top: 60px;
     right: 10px;
-    background: black;
+    background: gray;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
 
