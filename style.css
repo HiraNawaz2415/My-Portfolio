@@ -163,11 +163,11 @@ h1, h2 {
 }
 
 .project-card img {
-  width: 60%%;
-  height: 50%
-  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
 }
-
 .project-card h3 {
   margin: 15px 0 10px;
 }
