@@ -398,6 +398,14 @@ h2{
     padding: 40px 0;
   }
   
+  .swiper-slide {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+  }
+  
   .project-card img {
     width: 100%;
     max-height: 200px;
@@ -413,14 +421,3 @@ h2{
   .swiper-pagination-bullet-active {
     background: #000;
   }
-.swiper-slide {
-  display: flex;
-  flex-direction: column;
-  min-height: 250px;
-  align-items: center;
-  justify-content: center;
-}
-.swiper-wrapper {
-  display: flex;
-}
-
