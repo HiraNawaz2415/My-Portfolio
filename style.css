@@ -461,3 +461,69 @@ h2{
   .swiper-pagination-bullet-active {
     background: #000;
   }
+/* Circular Progress Skill Base Styles */
+.circular-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.circle-container {
+  width: 120px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.circle-container.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.progress-circle {
+  width: 100%;
+  height: 100%;
+}
+
+.bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 2.8;
+}
+
+.progress {
+  fill: none;
+  stroke: #00b894;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  stroke-dasharray: 0, 100;
+}
+
+.percentage {
+  fill: #333;
+  font-size: 0.45rem;
+  text-anchor: middle;
+}
+
+/* Keyframe animations for each percentage */
+@keyframes fillProgress-85 {
+  from { stroke-dasharray: 0, 100; }
+  to { stroke-dasharray: 85, 100; }
+}
+@keyframes fillProgress-75 {
+  from { stroke-dasharray: 0, 100; }
+  to { stroke-dasharray: 75, 100; }
+}
+@keyframes fillProgress-70 {
+  from { stroke-dasharray: 0, 100; }
+  to { stroke-dasharray: 70, 100; }
+}
+@keyframes fillProgress-60 {
+  from { stroke-dasharray: 0, 100; }
+  to { stroke-dasharray: 60, 100; }
+}
