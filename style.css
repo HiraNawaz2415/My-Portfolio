@@ -527,3 +527,30 @@ h2{
   from { stroke-dasharray: 0, 100; }
   to { stroke-dasharray: 60, 100; }
 }
+.grid-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  gap: 1.2rem;
+  justify-items: center;
+  padding: 1.5rem 0;
+}
+
+.grid-list img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.grid-list img.animate-icon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Optional hover animation */
+.grid-list img:hover {
+  transform: scale(1.1) rotate(3deg);
+}
+
