@@ -89,3 +89,22 @@ function typeWriterEffect(elementId, textArray, typingSpeed = 100, pauseTime = 1
   document.querySelectorAll(".circle-container").forEach(container => {
     skillObserver.observe(container);
   });
+
+  const iconObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const icons = entry.target.querySelectorAll("img");
+        icons.forEach((icon, i) => {
+          setTimeout(() => {
+            icon.classList.add("animate-icon");
+          }, i * 100); // stagger animation
+        });
+        iconObserver.unobserve(entry.target); // run once
+      }
+    });
+  }, { threshold: 0.4 });
+
+  const gridList = document.querySelector(".grid-list");
+  if (gridList) iconObserver.observe(gridList);
+
+
