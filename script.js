@@ -73,3 +73,19 @@ function typeWriterEffect(elementId, textArray, typingSpeed = 100, pauseTime = 1
   menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
   });
+  const skillObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const container = entry.target;
+        const progressPath = container.querySelector(".progress");
+        const value = progressPath.getAttribute("stroke-dasharray").split(',')[0];
+        progressPath.style.animation = `fillProgress-${value} 1.5s ease-out forwards`;
+        container.classList.add("animate");
+        skillObserver.unobserve(container); // Animate once
+      }
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll(".circle-container").forEach(container => {
+    skillObserver.observe(container);
+  });
