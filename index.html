@@ -234,10 +234,8 @@
     <p>&copy; 2025 Hira Nawaz. All rights reserved.</p>
   </footer>
 
-<!-- Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-<!-- Swiper Initialization -->
+</body>
+  <!-- Swiper Initialization + Hamburger Toggle -->
 <script>
   var swiper = new Swiper(".mySwiper", {
     loop: true,
@@ -257,15 +255,12 @@
     },
   });
 
-  // Toggle hamburger menu
-document.getElementById('menu-toggle').addEventListener('click', function () {
-  document.getElementById('nav-links').classList.toggle('active');
-});
+  const toggleBtn = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
 
+  toggleBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
 
-
-<!-- Your custom script -->
-<script src="script.js"></script>
-
-</body>
 </html>
