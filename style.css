@@ -68,7 +68,7 @@ nav ul li a:hover {
 }
 
 nav {
-  background: blue;
+  background:#1d2951 ;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -112,7 +112,7 @@ nav {
   }
 
   .nav-links a:hover {
-    color: #00f7ff;
+    background: linear-gradient(135deg, #00bcd4, #007BFF);
   }
 
   #menu-toggle {
