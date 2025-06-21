@@ -554,3 +554,59 @@ h2{
   transform: scale(1.1) rotate(3deg);
 }
 
+/* ===== Navbar ===== */
+.navbar {
+  background-color: #008b8b;
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  flex: 1;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: 600;
+  
+  /* Gradient Text */
+  background: linear-gradient(135deg, #00bcd4, #007BFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  transition: background 0.3s, color 0.3s;
+}
+
+
+.nav-links li a.active,
+.nav-links li a:hover {
+  background: linear-gradient(135deg, #3399ff, #00bcd4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.05);
+}
+
