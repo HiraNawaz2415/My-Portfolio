@@ -1,19 +1,30 @@
 :root {
-  --bg: #121212;
-  --text: #f0f0f0;
-  --text-light: #aaa;
-  --card: #1e1e1e;
-  --accent: #00bcd4;
+  --bg: #ffffff;
+  --text: #000000;
+  --text-light: #666666;
+  --card: #f4f6fb;
+  --accent: #126180;
+  --accent-light: #a2add0;
 
   --background-color: #ffffff;
   --text-color: #000000;
-  --header-blue: #007BFF;
+  --header-blue: #126180;
 }
 
 body.dark-mode {
   --background-color: #121212;
   --text-color: #f0f0f0;
-  --header-blue: #3399ff;
+  --header-blue: #a2add0;
+  --card: #1e1e1e;
+  --accent: #a2add0;
+  --accent-light: #126180;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 * {
