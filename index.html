@@ -256,7 +256,13 @@
       prevEl: ".swiper-button-prev",
     },
   });
-</script>
+
+  // Toggle hamburger menu
+document.getElementById('menu-toggle').addEventListener('click', function () {
+  document.getElementById('nav-links').classList.toggle('active');
+});
+
+
 
 <!-- Your custom script -->
 <script src="script.js"></script>
